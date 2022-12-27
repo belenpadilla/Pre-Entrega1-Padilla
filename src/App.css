@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.NavBarEstilo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  
+}
+
+.SacarDeco {
+  text-decoration: none;
+  color: black;
+}
+
+.Logo{
+
+  width: 150px;
+
+}
