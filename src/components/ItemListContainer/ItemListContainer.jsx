@@ -1,9 +1,9 @@
 import React from 'react'
 
 function ItemListContainer() {
-  return (
+    return (
     <div>¡Bienvenidos  a MAMBO tienda!</div>
-  )
+    )
 }
 
 export default ItemListContainer;
