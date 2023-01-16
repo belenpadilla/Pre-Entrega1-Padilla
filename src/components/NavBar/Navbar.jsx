@@ -6,7 +6,7 @@ function NavBar () {
         <><img className="Logo" src="/imgmambo/logomambo.png" alt="Logo Mambo" />
         <ul className="NavBarEstilo">
             <li >
-                <a className="SacarDeco" href="">Conjuntos</a>
+                <a className="SacarDeco" href="/Conjuntos">Conjuntos</a>
             </li>
             <li >
                 <a className="SacarDeco" href="">Tops</a>
