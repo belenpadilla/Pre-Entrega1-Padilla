@@ -5,11 +5,14 @@ function TarjetasProducto(props) {
     const {titulo,precio,detalle,img} = props;
 return (
     <div className='OrdenTarjeta'>
+        <div>
         <img className='tamañoImg' src={img} alt='producto'></img>
+        </div>
         <h3>{titulo}</h3>
         <h4>$ {precio}</h4>
         <p>{detalle}</p>
-        <BotonDiseño></BotonDiseño>
+        <BotonDiseño className="BotonE"></BotonDiseño>
+        
     </div>
 );
 }

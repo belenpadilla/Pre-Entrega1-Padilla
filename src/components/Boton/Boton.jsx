@@ -1,7 +1,8 @@
 import React from 'react'
+import './Boton.css'
 function BotonDiseño () {
     return (
-        <button type="button" className="btn btn-dark">Agregar al carrito</button>
+        <button className='BotonE'>Agregar al carrito</button>
         )
 }
 

@@ -1,0 +1,10 @@
+.BotonE{
+    padding: 5px 15px;
+    color: #ffffff;
+    max-width: 130px;
+    background-color: #282c34;
+    border-radius:4px ;
+    border: none;
+    margin: 10px 30px;
+    cursor: pointer;
+}

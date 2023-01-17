@@ -1,57 +1,33 @@
 import logo from './logo.svg';
+import CartWidget from './components/CartWidget/index';
+import arde from '../src/components/fotosropa/arde.jpg';
+import relojesss from '../src/components/fotosropa/relojesss.jpg'
+import riñooo from '../src/components/fotosropa/riñooo.jpg'
 import './App.css';
 import NavBar from './components/NavBar/Navbar'; 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import CartWidget from './components/CartWidget/index';
-import TarjetasProducto  from './components/Tarjetas/tarjetasproducto';
-import arde from '../src/components/fotosropa/arde.jpg'
-import {BrowserRouter, Routes,Route} from "react-router-dom;"
-
+import {BrowserRouter, Routes,Route} from "react-router-dom";
+import TarjetasProducto from './components/Tarjetas/tarjetasproducto';
 function App() {
   return (
     <BrowserRouter>
+      <div>
     <Routes>
-      <Route path="/" element={<ItemListContainer/>}></Route>
+      <Route path="/" element={ItemListContainer}></Route>
       <Route path="/Conjuntos" element={ <ItemListContainer/>}></Route>
     </Routes>
-  <><div>
-      <NavBar />
-      <ItemListContainer></ItemListContainer>
 
+  <NavBar />
+    <ItemListContainer></ItemListContainer>
+    <ItemListContainer></ItemListContainer>
       <br></br>
-    </div><div className='OrdenTarjetas'>
-        <TarjetasProducto
-          titulo=""
-          precio={500}
-          detalle=""
-          img={arde}
-        ></TarjetasProducto>
-        <TarjetasProducto
-          titulo=""
-          precio={500}
-          detalle=""
-          img="./MAMBO/mambo-proyecto/public/fotosropa/arde.jpg"
-        ></TarjetasProducto>
-        <TarjetasProducto
-          titulo=""
-          precio={500}
-          detalle=""
-          img="./MAMBO/mambo-proyecto/public/fotosropa/arde.jpg"
-        ></TarjetasProducto>
-        <TarjetasProducto
-          titulo=""
-          precio={500}
-          detalle=""
-          img="./MAMBO/mambo-proyecto/public/fotosropa/arde.jpg"
-        ></TarjetasProducto>
-        <TarjetasProducto
-          titulo=""
-          precio={500}
-          detalle=""
-          img="./MAMBO/mambo-proyecto/public/fotosropa/arde.jpg"
-        ></TarjetasProducto>
-      </div></>
+      </div>
+      <footer>
+        <p >MAMBO tienda | since 2022 </p>
+      </footer>
       </BrowserRouter>
+      
+  
   );
   }
 
