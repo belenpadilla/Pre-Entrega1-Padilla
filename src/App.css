@@ -70,5 +70,7 @@
 }
 
 .footer{
-  margin-left: 700px;
+  text-align: center;
+  background-color: #282c34;
+  color: #ffffff;
 }
