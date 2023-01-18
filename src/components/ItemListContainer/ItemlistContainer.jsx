@@ -15,8 +15,8 @@ function ItemListContainer() {
     <div className='OrdenTarjetas'>
     
         {articulos.map( (Item) =>
-        ( <Item listado={Item}/>
-        )
+        { <Item listado={Item}/>
+        }
         )}
     </div>
     </>
