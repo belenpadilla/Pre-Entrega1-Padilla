@@ -1,16 +1,16 @@
 import React from 'react';
 import BotonDiseño from '../Boton/Boton';
 
-function Item({titulo, precio, detalle, img}) {
+function Item({listado}) {
     
     return (
     <div>
-        <img className='tamañoImg' src={img} alt="ropa"></img>
-        <h3>{titulo}</h3>
-        <h4>$ {precio}</h4>
-        <p>{detalle}</p>
+        <img className='tamañoImg' src={listado.img} alt="ropa"></img>
+        <h3>{listado.titulo}</h3>
+        <h4>$ {listado.precio}</h4>
+        <p>{listado.detalle}</p>
         <BotonDiseño>añadir al carrito</BotonDiseño>
-    </div>
+        </div>
 )
 }
 

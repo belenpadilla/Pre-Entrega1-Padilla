@@ -1,22 +1,18 @@
 import React from 'react'
-import Item from '../Item/Item'
-import articulos from '../../data/articulos'
+import articulos from '../../data/articulos';
+import Item from '../Item/Item';
 function ItemListContainer() {
 return (
     <>
     <div className='OrdenTarjetas'>
-        {
-            articulos.map( (Item) => (<Item
-            titulo={Item.titulo} 
-            precio={Item.precio} 
-            detalle={Item.detalle} 
-            img={Item.img} 
-            />
-            )
+    
+        {articulos.map( (Item) =>
+        ( <Item listado={Item}/>
+        )
         )}
     </div>
     </>
-)
+);
 }
 
-export default ItemListContainer
+export default ItemListContainer;
