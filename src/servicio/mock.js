@@ -8,7 +8,7 @@ function getItem() {
 });
 }
 
-export function getItemDetalle() {
+export function getItemDetalle(itemid) {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(articulos[1]);

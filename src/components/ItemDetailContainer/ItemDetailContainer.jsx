@@ -5,23 +5,25 @@ import BotonDiseño from '../Boton/Boton';
 import ItemDetail from './ItemDetail';
 import articulos from '../../data/articulos';
 import Item from '../Item/Item';
+import { useParams } from 'react-router-dom';
+
 
 export default function ItemDetailContainer() {
     const [articulos, setArticulos] = useState([ ])
-
-    async function ItemAsync(){
-        let respuesta = await getItemDetalle();
-        setArticulos(respuesta)
-    }
+ 
+    let {itemid} = useParams();
+  
     
     useEffect(() => {
-        getItemDetalle()  
-}, []);
+        getItemDetalle(itemid).then((respuesta) => {
+            setArticulos(respuesta)
+})
+ }, []);
 
     
     return (
     
-   <ItemDetail articulos={articulos}/>
+   <Item articulos={articulos}/>
 
 );
     }

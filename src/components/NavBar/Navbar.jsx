@@ -6,17 +6,20 @@ function NavBar () {
     return (
         <><img className="Logo" src="/imgmambo/logomambo.png" alt="Logo Mambo" />
         <ul className="NavBarEstilo">
-            <li >
-                <Link to='' className="SacarDeco">Conjuntos</Link>
+        <li >
+                <Link  className="SacarDeco" to='/inicio'>Inicio</Link>
             </li>
             <li >
-                <Link to='' className="SacarDeco" >Tops</Link>
+                <Link  className="SacarDeco" to='/detalle'>detalle</Link>
             </li>
             <li >
-                <Link to='' className="SacarDeco" >Calzas</Link>
+                <Link  className="SacarDeco" to='' >Tops</Link>
             </li>
             <li >
-                <Link to='' className="SacarDeco" ><CartWidget/></Link>
+                <Link  className="SacarDeco" to='' >Calzas</Link>
+            </li>
+            <li >
+                <Link  className="SacarDeco" to='' ><CartWidget/></Link>
             </li>
         </ul>
         </>

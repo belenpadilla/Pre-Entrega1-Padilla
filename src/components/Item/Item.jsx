@@ -1,19 +1,19 @@
 import React from 'react';
 import BotonDiseño from '../Boton/Boton';
 import Botoncantidad from '../Boton/Botoncantidad'
+import { Link } from 'react-router-dom';
 
 
 function Item({listado}) {
-    
     return (
-    <div key={listado.titulo}>
+    <div key={listado.id}>
         <img className='tamañoImg' src={listado.img} alt="ropa"></img>
         <h3>{listado.titulo}</h3>
         <h4>$ {listado.precio}</h4>
         <p>{listado.detalle}</p>
-        <a href=''>Ver detalle</a>
+        <Link className="producto" to={`/detalle/${(listado.id)}`}></Link>
         <Botoncantidad/>
-        <BotonDiseño>añadir al carrito</BotonDiseño>
+        <BotonDiseño>Ver más</BotonDiseño>
         </div>
 )
 }

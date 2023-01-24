@@ -4,6 +4,7 @@ import Botoncantidad from '../Boton/Botoncantidad'
 import articulo from '../../data/articulos';
 import ItemDetailContainer from './ItemDetailContainer'
 import articulos from '../../data/articulos';
+import { Link } from 'react-router-dom';
 
 
 export default function ItemDetail({articulos}) {
