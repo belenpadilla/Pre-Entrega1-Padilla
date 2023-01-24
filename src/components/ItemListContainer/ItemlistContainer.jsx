@@ -5,26 +5,26 @@ import { useEffect, useState } from 'react';
 import ClickCantidad from '../Boton/Botoncantidad';
 import getItem from '../../servicio/mock';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer() {
     const [articulos, setArticulos] = useState([ ])
+    let {categoriaid} = useParams()
+    
     useEffect(() => {
-        setArticulos(articulos)
-        }, [ ])
+
     getItem().then((completado) => {
-        setArticulos(completado);
+        categoriaid === undefined ?
+        setArticulos(completado)
+        :
+        setArticulos(completado.filter(Item => Item.categoriaid.toLowerCase() === categoriaid.toLowerCase))
     });
+},[categoriaid]);
 
     return (
     <>
     <div className='OrdenTarjetas'>
-        {articulos.map( (i) =>
-        <>
-        <Item
-        listado={i} 
-        />
-        </>
-        )}
+        {articulos.map( (i) => <Item listado={i} /> )}
     </div>
     </>
 );

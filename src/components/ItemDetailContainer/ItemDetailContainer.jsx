@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 
 export default function ItemDetailContainer() {
-    const [articulos, setArticulos] = useState([ ])
+    const [articulos, setArticulos] = useState({})
  
     let {itemid} = useParams();
   
@@ -18,12 +18,12 @@ export default function ItemDetailContainer() {
         getItemDetalle(itemid).then((respuesta) => {
             setArticulos(respuesta)
 })
- }, []);
+ }, [itemid]);
 
     
     return (
     
-   <Item articulos={articulos}/>
+   <Item listado={articulos}/>
 
 );
     }

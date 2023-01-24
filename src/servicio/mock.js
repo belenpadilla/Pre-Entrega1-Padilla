@@ -1,5 +1,5 @@
 import articulos from "../data/articulos";
-
+import item from "../components/Item/Item"
 function getItem() {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -11,7 +11,7 @@ function getItem() {
 export function getItemDetalle(itemid) {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve(articulos[1]);
+        resolve(articulos.find(item.id === Number(itemid)));
     },1000)
 });
 }

@@ -13,10 +13,10 @@ function NavBar () {
                 <Link  className="SacarDeco" to='/detalle'>detalle</Link>
             </li>
             <li >
-                <Link  className="SacarDeco" to='' >Tops</Link>
+                <Link  className="SacarDeco" to='/categoria/Indumentaria' >Indumentaria</Link>
             </li>
             <li >
-                <Link  className="SacarDeco" to='' >Calzas</Link>
+                <Link  className="SacarDeco" to='/categoria/Accesorios' >Accesorios</Link>
             </li>
             <li >
                 <Link  className="SacarDeco" to='' ><CartWidget/></Link>

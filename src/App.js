@@ -13,7 +13,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
+      <Route path='/' element={<ItemListContainer/>}></Route>
         <Route path='/inicio' element={<ItemListContainer/>}></Route>
+        <Route path='/categoria/:categoriaid' element={<ItemListContainer/>}></Route>
         <Route path='/item/:itemid' element={<ItemDetailContainer/>}></Route>
         <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}></Route>
       </Routes>
