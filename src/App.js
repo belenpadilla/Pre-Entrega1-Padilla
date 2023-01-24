@@ -5,14 +5,21 @@ import NavBar from './components/NavBar/Navbar';
 import Item from './components/Item/Item';
 import BotonDiseño from './components/Boton/Boton';
 import ItemListContainer from './components/ItemListContainer/ItemlistContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer/>
-
-      </>
+      <Routes>
+        <Route path='/inicio' element={<ItemListContainer/>}></Route>
+        <Route path='/detalle/:id' element={<ItemDetailContainer/>}></Route>
+        <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}></Route>
+      </Routes>
+      
+  
+    </BrowserRouter>
       
   
   );
