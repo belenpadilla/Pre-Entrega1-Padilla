@@ -1,5 +1,5 @@
 
-const articulos = [
+export const articulos = [
     {
     id:1,
     titulo:"Top MAMBO",

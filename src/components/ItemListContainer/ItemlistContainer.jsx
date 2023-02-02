@@ -3,7 +3,7 @@ import articulos from '../../data/articulos';
 import Item from '../Item/Item';
 import { useEffect, useState } from 'react';
 import ClickCantidad from '../Boton/Botoncantidad';
-import getItem from '../../servicio/mock';
+import {getItem, getItemDetalle} from '../../servicio/mock';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import { useParams } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ function ItemListContainer() {
         categoriaid === undefined ?
         setArticulos(completado)
         :
-        setArticulos(completado.filter(Item => Item.categoriaid.toLowerCase() === categoriaid.toLowerCase))
+        setArticulos(completado.filter(Item => Item.categoriaid.toLowerCase() === categoriaid.toLowerCase()))
     });
 },[categoriaid]);
 

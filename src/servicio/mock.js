@@ -1,10 +1,11 @@
 import articulos from "../data/articulos";
 import item from "../components/Item/Item"
-function getItem() {
+
+ export function getItem() {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(articulos);
-    },1000)
+    },1)
 });
 }
 
@@ -12,10 +13,10 @@ export function getItemDetalle(itemid) {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(articulos.find(item.id === Number(itemid)));
-    },1000)
+    },1)
 });
 }
 
 
 
-export default getItem;
+/*export default getItem;*/
