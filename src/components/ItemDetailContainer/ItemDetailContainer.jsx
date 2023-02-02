@@ -1,29 +1,26 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import  {getItemDetalle} from '../../servicio/mock';
-import BotonDiseño from '../Boton/Boton';
-import ItemDetail from './ItemDetail';
-import articulos from '../../data/articulos';
+import { getItem, getItemDetalle} from '../../servicio/mock';
 import Item from '../Item/Item';
 import { useParams } from 'react-router-dom';
 
 
 export default function ItemDetailContainer() {
-    const [articulos, setArticulos] = useState({})
+    const [articulo, setArticulo] = useState({})
  
     let {itemid} = useParams();
   
     
     useEffect(() => {
         getItemDetalle(itemid).then((respuesta) => {
-            setArticulos(respuesta)
+            setArticulo(respuesta)
 })
  }, [itemid]);
 
     
     return (
     
-   <Item listado={articulos}/>
+   <Item listado={articulo}/>
 
 );
     }

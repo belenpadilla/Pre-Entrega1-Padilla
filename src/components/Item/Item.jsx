@@ -9,15 +9,17 @@ import articulos from '../../data/articulos';
 function Item({listado}) {
     console.log("LISTADO", listado)
     return (
-    <div key={listado.id}>
+        <section className='ordenDetalle'>
+    <div  key={listado.id}>
         <img className='tamañoImg' src={listado.img} alt="ropa"></img>
         <h3>{listado.titulo}</h3>
         <h4>$ {listado.precio}</h4>
         <p>{listado.detalle}</p>
-        <Link className="producto" to={`/articulos/${(articulos.id)}`}>Ver más</Link>
+        <Link className="producto" to={`/item/${(listado.id)}`}>Ver más</Link>
         <Botoncantidad/>
-        <BotonDiseño>Agregar al carrito</BotonDiseño>
+        <BotonDiseño>Ver más</BotonDiseño>
         </div>
+        </section>
 )
 }
 

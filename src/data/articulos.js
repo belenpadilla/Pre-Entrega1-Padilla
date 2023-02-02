@@ -37,7 +37,7 @@ export const articulos = [
     img:"/assets/fotosropa/arde.jpg",
     },
     {
-    key:5,
+    id:5,
     titulo:"mambo pink",
     precio:7900,
     categoria:"indumentaria",

@@ -17,14 +17,14 @@ function ItemListContainer() {
         categoriaid === undefined ?
         setArticulos(completado)
         :
-        setArticulos(completado.filter(Item => Item.categoriaid.toLowerCase() === categoriaid.toLowerCase()))
+        setArticulos(completado.filter(Item => Item.categoria.toLowerCase() === categoriaid.toLowerCase()))
     });
 },[categoriaid]);
 
     return (
     <>
     <div className='OrdenTarjetas'>
-        {articulos.map( (i) => <Item listado={i} /> )}
+        {articulos.map( (i) => <Item listado={i} key={i.id} /> )}
     </div>
     </>
 );

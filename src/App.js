@@ -13,11 +13,11 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-      <Route path='/inicio' element={<ItemListContainer/>}></Route>
-        <Route path='/detalle/detalleid' element={<ItemDetailContainer/>}></Route>
-        <Route path='/categotia/:categoriaid' element={<ItemListContainer/>}></Route>
-        <Route path='/item/:itemid' element={<ItemDetailContainer/>}></Route>
-        <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}></Route>
+        <Route path='/' element={<ItemListContainer/>}></Route>
+        <Route path='/inicio' element={<ItemListContainer/>}></Route>
+        <Route path='/categoria/:categoriaid' element={<ItemListContainer/>}/>
+        <Route path='/item/:itemid' element={<ItemDetailContainer/>}/>
+        <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}/>
       </Routes>
       
   
