@@ -1,9 +1,12 @@
 import React from 'react'
 import './Boton.css'
-function BotonDiseño () {
+
+
+/*function BotonDiseño () {
+    
     return (
-        <button className='BotonE'>Agregar al carrito</button>
+        <button className='BotonE' onClick={""}>Agregar al carrito</button>
         )
 }
 
-export default BotonDiseño;
+export default BotonDiseño;*/

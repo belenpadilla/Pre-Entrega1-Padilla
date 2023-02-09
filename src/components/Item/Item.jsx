@@ -3,6 +3,7 @@ import BotonDiseño from '../Boton/Boton';
 import Botoncantidad from '../Boton/Botoncantidad'
 import { Link } from 'react-router-dom';
 import articulos from '../../data/articulos';
+import ClickCantidad from '../Boton/Botoncantidad';
 
 
 
@@ -16,8 +17,7 @@ function Item({listado}) {
         <h4>$ {listado.precio}</h4>
         <p>{listado.detalle}</p>
         <Link className="producto" to={`/item/${(listado.id)}`}>Ver más</Link>
-        <Botoncantidad/>
-        <BotonDiseño>Ver más</BotonDiseño>
+        <ClickCantidad onAddToCart={handleAdd}>Ver más</ClickCantidad>
         </div>
         </section>
 )

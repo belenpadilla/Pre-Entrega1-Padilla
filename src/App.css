@@ -78,3 +78,17 @@
   display: flex;
   justify-content: center;
 }
+.ordenDetalleDos {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+.decoLink {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+
+}
