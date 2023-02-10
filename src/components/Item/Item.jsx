@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import BotonDiseño from '../Boton/Boton';
 import Botoncantidad from '../Boton/Botoncantidad'
 import { Link } from 'react-router-dom';
 import articulos from '../../data/articulos';
 import ClickCantidad from '../Boton/Botoncantidad';
+import { CartContext } from '../../context/context';
 
 
 
 function Item({listado}) {
-    console.log("LISTADO", listado)
+    const {addItem} = useContext(CartContext);
+    // console.log("LISTADO", listado)
     return (
         <section className='ordenDetalle'>
     <div  key={listado.id}>
@@ -17,7 +19,7 @@ function Item({listado}) {
         <h4>$ {listado.precio}</h4>
         <p>{listado.detalle}</p>
         <Link className="producto" to={`/item/${(listado.id)}`}>Ver más</Link>
-        <ClickCantidad onAddToCart={handleAdd}>Ver más</ClickCantidad>
+        <ClickCantidad produc={listado}>Ver más</ClickCantidad>
         </div>
         </section>
 )

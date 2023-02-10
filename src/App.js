@@ -12,11 +12,11 @@ import Deco from './components/decoracion/deco';
 import DecoFooter from './components/decoracion/footer'
 import { userContext } from './context/context';
 import { CartContextProvider } from './context/context';
-import { pepito } from './context/context';
 import ClickCantidad from './components/Boton/Botoncantidad';
+import { CartListContainer } from './components/listaCarrito/carrito';
 function App() {
   return (
-    <CartContextProvider value={{pepito}}> 
+    <CartContextProvider> 
     <BrowserRouter>
       <NavBar />
       <Deco />
@@ -24,6 +24,8 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemListContainer/>}></Route>
         <Route path='/inicio' element={<ItemListContainer/>}></Route>
+        <Route path='/carrito' element={<CartListContainer/>}></Route>
+        {/* <Route path='/checkout' element={<Checkout/>}></Route> */}
         <Route path='/categoria/:categoriaid' element={<ItemListContainer/>}/>
         <Route path='/item/:itemid' element={<ItemDetailContainer/>}/>
         <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}/>

@@ -3,14 +3,14 @@ import { useEffect, useState, useContext } from 'react';
 import { getItem, getItemDetalle} from '../../servicio/mock';
 import Item from '../Item/Item';
 import { useParams } from 'react-router-dom';
-import { cartContext } from '../../context/cartContext';
+import { CartContext } from '../../context/context';
 import articulos from '../../data/articulos';
 
 
 export default function ItemDetailContainer() {
     const [articulo, setArticulo] = useState({});
     let {itemid} = useParams();
-    const {addItem} = useContext(cartContext);
+    const {addItem} = useContext(CartContext);
     
     function handlerAddToCart(){
         alert(`Agregaste  ${articulo.titulo} al carrito`);

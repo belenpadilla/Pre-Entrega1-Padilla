@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/context";
 import CartWidget from "../CartWidget";
 
+
 function NavBar () {
+    const {cart} = useContext(CartContext)
+    console.log(cart)
     return (
         <><img className="Logo" src="/imgmambo/logomambo.png" alt="Logo Mambo" />
         <ul className="NavBarEstilo">
@@ -19,7 +23,7 @@ function NavBar () {
                 <Link  className="SacarDeco" to='/categoria/Accesorios' >Accesorios</Link>
             </li>
             <li >
-                <Link  className="SacarDeco" to='' ><CartWidget/></Link>
+                <CartWidget/>
             </li>
         </ul>
         </>

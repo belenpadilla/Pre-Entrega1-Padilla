@@ -1,23 +1,20 @@
-import React from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context/context";
 import './Boton.css'
 
-function ClickCantidad({}){
-    const [count, setCount] = React.useState(0);
-    function handleAdd() {
-        setCount(count + 1);
-      }
-    
-      function handleSubstract() {
-        setCount(count - 1);
-      }
+
+function ClickCantidad({produc}){
+  const {addItem} = useContext(CartContext);
+    const [count, setCount] = useState(1);
+
 return(
     <div >
         <div className="BotonCantDos">
-        <button className="BotonCant" disabled={ count <= 1} onClick={ () => setCount (count - 1)}> - </button>
+        <button className="BotonCant" disabled={ count === 0} onClick={ () => setCount (count - 1)}> - </button>
         <span>{count}</span>
         <button className="BotonCant" onClick={ () => setCount (count + 1)}> + </button>
         </div>
-        <button className='BotonE' onClick={()=> handleAdd(count)}>Agregar al carrito</button>
+        <button className='BotonE' onClick={()=> {addItem(produc, count);setCount(1)}}>Agregar al carrito</button>
     </div>
 )
 };
