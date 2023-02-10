@@ -17,7 +17,7 @@ return(
         <span>{count}</span>
         <button className="BotonCant" onClick={ () => setCount (count + 1)}> + </button>
         </div>
-        <button className='BotonE' onClick={()=> onAddToCart(count)}>Agregar al carrito</button>
+        <button className='BotonE' onClick={()=> handleAdd(count)}>Agregar al carrito</button>
     </div>
 )
 };
