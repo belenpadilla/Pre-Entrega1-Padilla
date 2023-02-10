@@ -1,12 +1,13 @@
 import { createContext } from "react"
 
-export const userContext = createContext({ user :"anonymous"})
+export const UserContext = createContext({ user :"anonymous"})
+export const pepito = "hola";
 
 export function CartContextProvider(props) {
 return(
-        <userContext.Provider>
+        <UserContext.Provider>
             {props.children}
-        </userContext.Provider>
+        </UserContext.Provider>
 )
 }
 

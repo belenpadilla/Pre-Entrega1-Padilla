@@ -12,10 +12,11 @@ import Deco from './components/decoracion/deco';
 import DecoFooter from './components/decoracion/footer'
 import { userContext } from './context/context';
 import { CartContextProvider } from './context/context';
-
+import { pepito } from './context/context';
+import ClickCantidad from './components/Boton/Botoncantidad';
 function App() {
   return (
-    <CartContextProvider> 
+    <CartContextProvider value={{pepito}}> 
     <BrowserRouter>
       <NavBar />
       <Deco />
