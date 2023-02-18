@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEffect, useState, useContext } from 'react';
-import { getItem, getItemDetalle} from '../../servicio/mock';
+import {  getItemDetalle} from '../../servicio/mock';
 import Item from '../Item/Item';
+import {getItems} from '../../servicio/firebase'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../../context/context';
 import articulos from '../../data/articulos';

@@ -14,7 +14,11 @@ import { userContext } from './context/context';
 import { CartContextProvider } from './context/context';
 import ClickCantidad from './components/Boton/Botoncantidad';
 import { CartListContainer } from './components/listaCarrito/carrito';
+import { getItemDetalle, testApp } from './servicio/firebase';
 function App() {
+  
+  testApp();
+  getItemDetalle();
   return (
     <CartContextProvider> 
     <BrowserRouter>

@@ -4,8 +4,10 @@ import Item from '../Item/Item';
 import { useEffect, useState } from 'react';
 import ClickCantidad from '../Boton/Botoncantidad';
 import {getItem, getItemDetalle} from '../../servicio/mock';
+
+import {getItems, getItemPromise} from '../../servicio/firebase'; 
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
-import { useParams } from 'react-router-dom';
+import { Form, useParams } from 'react-router-dom';
 
 function ItemListContainer() {
     const [articulos, setArticulos] = useState([ ])
