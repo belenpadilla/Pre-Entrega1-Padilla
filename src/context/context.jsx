@@ -31,12 +31,12 @@ export function CartContextProvider(props) {
 
     }
     function cantidadPrecio () {
-        let cantidadPrec = 0;
-        cart.map (item => cantidadPrec = cantidadPrec + item.precio )
-
-        return( cantidadPrec)
-
-    }
+        let cantidadPrecio = 0;
+        cart.map (item => cantidadPrecio = cantidadPrecio + item.precio )
+ 
+        return (cantidadPrecio)
+    
+    } 
    function vaciasCarrito(){
      setCart([])
    }

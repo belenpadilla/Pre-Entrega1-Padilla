@@ -1,10 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, } from 'react'
 import { CartContext } from '../../context/context'
 import { createBuyOrden } from '../../servicio/firebase'
 import Item from '../Item/Item'
+import swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
 
-export const CartListContainer = () => {
-    function handleCheckout(evt){
+export const CartListContainer = () => { 
+  const navigateTo = useNavigate();
+  async  function handleCheckout(evt){
       const items = cart.map( articulo => ({ id: articulo.id, titulo: articulo.titulo, precio: articulo.precio, cantidad: articulo.cantidad}))
       const orden = {
       buyer: {
@@ -16,15 +19,26 @@ export const CartListContainer = () => {
       date:new Date(),
       total:2000,
     }
-    createBuyOrden(orden)
-    }
+    let id = await createBuyOrden(orden);
 
+
+
+ /* swal.fire (
+    "¡Gracias por realizar su compra!", "en breve le llegara un mail con toda la información."`${Item.id}` , "success", 
+  ) */
+
+   {vaciasCarrito()}
+  navigateTo(`/detallecompra/${id}`);
+  }
+  
     const {cart,vaciasCarrito,cantidadPrecio,borrarUno} = useContext(CartContext)
   return (
 
     <>
-    {cantidadPrecio()}
-    <button className='BotonCarrito ' onClick={vaciasCarrito}>Vaciar Carrito </button>
+    <div>
+      <p>El total de su compra es: {cantidadPrecio()} </p>
+    </div> 
+    
         <div>{cart.map(Item => 
         <section className='ordenDetalle' key={Item.id}>
         <div >
@@ -35,8 +49,11 @@ export const CartListContainer = () => {
         <p>{Item.detalle}</p>
         <button className='BotonE' onClick={()=> borrarUno(Item.id)}>Eliminar producto</button>
         </div>
-        <button className='BotonE' onClick={handleCheckout}>Finalizar compra</button>
         </section>)}</div>
+        <div className='lugarBotones'>
+        <button className='BotonE' onClick={handleCheckout}>Finalizar compra</button>
+        <button className='BotonCarrito' onClick={vaciasCarrito}>Vaciar Carrito </button>
+        </div>
     </>
 
     

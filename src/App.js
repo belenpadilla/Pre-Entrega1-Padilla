@@ -15,12 +15,16 @@ import { CartContextProvider } from './context/context';
 import ClickCantidad from './components/Boton/Botoncantidad';
 import { CartListContainer } from './components/listaCarrito/carrito';
 import { getItemDetalle, testApp } from './servicio/firebase';
+import swal from "sweetalert2";
+import OrdenCompra from './components/detalleCompra/OrdenCompra';
+import { exportData } from './servicio/firebase';
 function App() {
   
   testApp();
   getItemDetalle();
   return (
     <CartContextProvider> 
+      {/* <button onClick={exportData }> exportarData </button> */}
     <BrowserRouter>
       <NavBar />
       <Deco />
@@ -29,7 +33,7 @@ function App() {
         <Route path='/' element={<ItemListContainer/>}></Route>
         <Route path='/inicio' element={<ItemListContainer/>}></Route>
         <Route path='/carrito' element={<CartListContainer/>}></Route>
-        {/* <Route path='/checkout' element={<Checkout/>}></Route> */}
+       <Route path='/detallecompra/:orderid' element={<OrdenCompra/>}></Route>
         <Route path='/categoria/:categoriaid' element={<ItemListContainer/>}/>
         <Route path='/item/:itemid' element={<ItemDetailContainer/>}/>
         <Route path='*' element={<h1>ERROR pagina no encontrada</h1>}/>

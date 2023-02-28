@@ -54,7 +54,10 @@
 }
 
 .Logo{
-  margin-left: 700px;
+  display: flex;
+  
+  position: relative;
+
   width: 150px;
   
 
@@ -70,6 +73,7 @@
 }
 
 .footer{
+  margin-top: 120px;
   text-align: center;
   background-color: #282c34;
   color: #ffffff;
@@ -80,7 +84,7 @@
 }
 .ordenDetalleDos {
   display: flex;
-  justify-content: center;
+  justify-content:center;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -91,4 +95,15 @@
   list-style: none;
   color: black;
 
+}
+.lugarBontones{
+  display: flex;
+justify-content: center;
+}
+
+
+.finalCompra{
+  background-color: #282c34;
+  color: aliceblue;
+  
 }
